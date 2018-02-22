@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ABout Me!</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="api.html">Google Maps API</a></li>
+        </ul>
+        <div class="title">
+            <h1>About Me</h1>
+        </div>
+        <div class="mainDIV">
+
+        </div>
+        <!--____________ARTICLE START____________-->
+        <article>
+            <p id="header">Things I Like:</p>
+
+            <div class="w3-content w3-display-container">
+                    <div class="w3-display-container mySlides">
+                            <img src="https://www.cicis.com/media/1243/pizza_adven_zestypepperoni.png">
+                            <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                              Pizza
+                            </div>
+                          </div>
+                    <div class="w3-content w3-display-container">
+                        <div class="w3-display-container mySlides">
+                            <img src="https://nsucurrent.nova.edu/wp-content/uploads/2015/04/video-games-893225_960_720.jpg">
+                            <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                                Gaming
+                            </div>
+                            <div class="w3-content w3-display-container">
+                                    <div class="w3-display-container mySlides">
+                                        <img src="https://nsucurrent.nova.edu/wp-content/uploads/2015/04/video-games-893225_960_720.jpg">
+                                        <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                                            Gaming
+                                        </div>
+                                  </div>
+
+              <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+              <img class="mySlides" src="img_forest.jpg" style="width:100%">
+            
+              <button class="w3-button w3-black display-left" onclick="plusDivs(-1)">&#10094;</button>
+              <button class="w3-button w3-black display-right" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+            <script>
+                    var slideIndex = 1;
+                    showDivs(slideIndex);
+                    
+                    function plusDivs(n) {
+                      showDivs(slideIndex += n);
+                    }
+                    
+                    function showDivs(n) {
+                      var i;
+                      var x = document.getElementsByClassName("mySlides");
+                      if (n > x.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = x.length}
+                      for (i = 0; i < x.length; i++) {
+                         x[i].style.display = "none";  
+                      }
+                      x[slideIndex-1].style.display = "block";  
+                    }
+                    </script>
+            </article>
+            <!--_____________ASIDE START_____________-->
+            <aside>
+                <p>Favorite Video:</p>
+            </aside>
+            <hr>
+            <!--FOOTER START -->
+            <footer id="foot">
+                This is Footer
+            </footer>
+    </body>
+</html>
